@@ -1,0 +1,24 @@
+<?php
+echo '<div id="banner1">';
+echo do_shortcode('[elementor-template id="536"]');
+echo '</div>';
+
+echo '<div id="banner2" style="display: none;">';
+echo do_shortcode('[elementor-template id="748"]');
+echo '</div>';
+?>
+
+<script>
+setInterval(function() {
+    var b1 = document.getElementById('banner1');
+    var b2 = document.getElementById('banner2');
+    
+    if (b1.style.display === 'none') {
+        b1.style.display = 'block';
+        b2.style.display = 'none';
+    } else {
+        b1.style.display = 'none';
+        b2.style.display = 'block';
+    }
+}, 3000);
+</script>
